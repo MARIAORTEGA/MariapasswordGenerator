@@ -6,9 +6,31 @@ var passwordCriteria2 = confirm("Would you like numbers?");
 var passwordCriteria3 = confirm("Would you like special characters (such as ! @ # ?) ]?"); 
 var passwordCriteria4 = prompt("For password lenght, please choose between 8-128 characters.")
 
-//var availableChoices = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz",
-//, "0123456789", "!@#$%^&*()_+=?"]; 
+if (passwordCriteria4 < 8 || passwordCriteria4 > 128) {
+  alert ("For password lenght, please choose between 8-128 characters.");
+  prompt ("For password lenght, please choose between 8-128 characters.")
+}
 
+
+var choices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+=?"
+
+var password= ""
+
+//if (passwordCriteria) {
+  //.generate = password 
+//}
+
+//if (passwordCriteria1) {
+  //.generate  = password 
+//}
+
+//if (passwordCriteria2) {
+  //.generate  = password 
+//}
+
+//if (passwordCriteria3) {
+  //.generate  = password 
+//}
 
 
  //Write password to the #password input
@@ -26,30 +48,15 @@ var passwordCriteria4 = prompt("For password lenght, please choose between 8-128
   //start with empty choices array or string and empty password
   //do if conditions to build an array or string of character possibilities
 
-function generate(){
-  var length = document.querySelector("#generate").value;
-  var availableChoices = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+=?";
-  var password = ""
-
-  for(var i=0; i<= length; i++){
-    password = password + values.charAt(Math.floor(Math.random() * Math.floor(value.length -1)));
-
-}
 
 
 //for looping through password criteria 4 lenght and add random character to password
-   //for (var i = 0; i < availableChoices.lenght; i++) {  
-  //var availableChoices = availableChoices[Math.floor(Math.random() * availableChoices.length)]; 
-
-  //return the password
-
-
-document.querySelector("#generate").value = password;
-
+function generate(){
+   for (var i = 0; i <= choices ; i++) {  
+  var password = choices[Math.floor(Math.random() * choices.length)]; 
+   }
+  return password
 }
-
-
-
 
 
 
